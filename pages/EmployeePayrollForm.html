@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmployeePayrollService</title>
+   
+</head>
+<style>
+    body{
+width: 0;
+height:100%;
+}
+
+.header{
+padding: 20px 0;
+background-color: red;
+align-items: center;
+}
+
+.header-content{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+border: 0 solid green;
+}
+
+.logo-content{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+align-items: center;
+margin-left: 400px;
+border: 0px solid green; 
+}
+.emp-text{
+font: normal normal bold 20px/25px Montserrat;
+font-family: "Montserrat", sans-serif;
+letter-spacing: 0px;
+color: greenyellow;
+font-size: 40px;
+text-transform: capitalize;
+}
+.emp-payroll{
+color: grey;
+font-size:40px;
+}
+
+*{
+box-sizing: border-box;
+}
+
+.form-content{
+    min-height: calc(100% - 80px);
+    display: flex;
+    flex-direction: row;
+}
+</style>
+<body>
+    <header class="header-content header">
+        <div class = "logo-content">
+            <img src = "..\assets\userform.jpg">
+            <div class="text-contailer">
+            <span class= "emp-text">EMPLOYEE</span><br><br>
+            <span class= "emp-payroll emp-text">PAYROLL</span>
+            </div>
+            </div>
+    </header>
+        <div class = "form-content"  class= "flex-container">
+            <form class= "form" action ="#" onsubmit="save()">
+                <div>Employee Payroll Form</div>
+                <div>
+                    <label for= "name" class= "label text">name</label>
+                    <input id ="name" class="inpur" type="text" name= "name" placeholder="your name..">
+                </div>
+            </form>
+        </div>
+        </body>
+</html>
