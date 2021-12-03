@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmployeePayrollService</title>   
+</head>
+<!-- <style>
+    body{
+    margin :0%;
+    height:100%;
+}
+
+.header{
+padding: 15px 0;
+background-color:blanchedalmond;
+height: 10%;
+}
+
+.header-content{
+display: flex;
+flex-direction: row;
+align-items: center;
+border: 0 solid green;
+}
+
+.logo-content{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+align-items: center;
+border: 0px solid green;
+}
+
+.text-contailer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 0px 10px;
+}
+
+.emp-text{
+    font: normal normal bold 20px/25px Montserrat;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 1px;
+    color: greenyellow;
+    font-size: 40px;
+    text-transform: capitalize;
+}
+.emp-payroll{
+    color: grey;
+    font-size:40px;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+
+*{
+box-sizing: border-box;
+}
+
+.form-content{
+    min-height: calc(100% - 80px);
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid violet;
+    justify-content:center;
+    align-items: center;
+    align-content: space-between;
+}
+
+.form{
+        width: 65%;
+        padding: 44px 60px;
+        background: whitesmoke;
+        box-shadow: 0px 3px 6px gray;
+        border: 1px solid wheat;
+        border-radius: 8px;
+        font-size: 30px;
+}
+
+.label,input{ 
+    font-size: 30px;
+}
+
+input[type="text"]{
+    background-color:darkseagreen;
+}
+ins{
+    color: red;
+}
+
+</style> -->
+<body>
+    <header class="header-content header">
+        <div class = "logo-content">
+            <img src = "..\assets\user.jpg">
+            <div class="text-contailer">
+            <span class= "emp-text" >EMPLOYEE</span>
+            <span class= "emp-payroll emp-text">PAYROLL</span>
+            </div>
+            </div>
+    </header>
+        <div class = "form-content"  class= "flex-container">
+            <form class= "form" action ="#" onsubmit="save();return false">
+                <div>Employee Payroll Form</div><br>
+                <div>
+                    <label for= "name" class= "label text">Name</label><ins>*</ins>
+                    <input id ="name" class="input" type="text" name= "name" 
+                    placeholder="your name.." required>
+                </div>
+            </form>
+        </div>
+    </body>
+    <style href = "..\css\Employee_form.css"></style>
+</html>
