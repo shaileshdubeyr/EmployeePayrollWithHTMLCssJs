@@ -18,24 +18,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const output = document.querySelector("#salary-output");
     output.textContent = salary.value;
     salary.addEventListener('input', function () {
-      output.textContent = salary.value;
+        output.textContent = salary.value;
     });
 });
 
 const save = () => {
-    try{
+    try {
         let employeePayrollData = createEmployeePayroll();
         createAndUpdateStorage(employeePayrollData);
-    } catch (e){
+    } catch (e) {
         return;
     }
 }
 
-function createAndUpdateStorage(employeePayrollData){
+function createAndUpdateStorage(employeePayrollData) {
     let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
-    if(employeePayrollList != undefined){
+    if (employeePayrollList != undefined) {
         employeePayrollList.push(employeePayrollData);
-    }else {
+    } else {
         employeePayrollList = [employeePayrollData];
     }
     alert(employeePayrollList.toString());
@@ -44,9 +44,9 @@ function createAndUpdateStorage(employeePayrollData){
 
 const createEmployeePayroll = () => {
     let employeePayrollData = new EmployeePayrollData();
-    try{
+    try {
         employeePayrollData.name = getInputValueById('#name');
-    } catch (e){
+    } catch (e) {
         setTextValue('.text-error', e);
         throw e;
     }
@@ -55,7 +55,7 @@ const createEmployeePayroll = () => {
     employeePayrollData.department = getSelectedValues('[name=Department]');
     employeePayrollData.salary = getInputValueById('#salary');
     employeePayrollData.note = getInputValueById('#notes');
-    let date = getInputValueById('#day')+" "+getInputValueById('#month')+" "+getInputValueById('#year');
+    let date = getInputValueById('#day') + " " + getInputValueById('#month') + " " + getInputValueById('#year');
     employeePayrollData.date = Date.parse(date);
     alert(employeePayrollData.toString());
     return employeePayrollData;
@@ -65,7 +65,7 @@ const getSelectedValues = (propertyValue) => {
     let allItems = document.querySelectorAll(propertyValue);
     let selItems = [];
     allItems.forEach(item => {
-        if(item.checked) selItems.push(item.value);
+        if (item.checked) selItems.push(item.value);
     });
     return selItems;
 }
@@ -95,4 +95,4 @@ const unsetSelectedValues = (propertyValue) => {
     });
 }
 
- 
+
