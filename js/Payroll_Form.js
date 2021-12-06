@@ -20,7 +20,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     salary.addEventListener('input', function () {
       output.textContent = salary.value;
     });
-
 });
 
 const save = () => {
@@ -42,9 +41,9 @@ const createEmployeePayroll = () => {
     }
     employeePayrollData.profilePic = getSelectedValues('[name=profile]').pop();
     employeePayrollData.gender = getSelectedValues('[name=gender]').pop();
-    employeePayrollData.department = getSelectedValues('[name=department]');
+    employeePayrollData.department = getSelectedValues('[name=Department]');
     employeePayrollData.salary = getInputValueById('#salary');
-    employeePayrollData.note = getInputValueById('#note');
+    employeePayrollData.note = getInputValueById('#notes');
     let date = getInputValueById('#day')+" "+getInputValueById('#month')+" "+getInputValueById('#year');
     employeePayrollData.date = Date.parse(date);
     alert(employeePayrollData.toString());
